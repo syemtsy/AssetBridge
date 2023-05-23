@@ -258,7 +258,7 @@ namespace AssetStudioGUI
 
         private static bool TryExportFile(string dir, AssetItem item, string extension, out string fullPath)
         {
-            var fileName = FixFileName(item.Text + "-" + asset.SourceFile.fileName + "-" + asset.m_PathId);
+            var fileName = FixFileName(item.Text + "-" + item.SourceFile.fileName + "-" + item.m_PathID);
             fullPath = Path.Combine(dir, fileName + extension);
             if (!File.Exists(fullPath))
             {
